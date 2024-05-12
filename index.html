@@ -6,14 +6,30 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <!-- from when in beta:
+      <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+      Instructor mentions this gives helpful warnings and error messages during development.
+      Out of curiousity, does including this script create a CORS issue?
+    --> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
+      <!--  before mounting the app in the dom, the tab below was just informational.-->
+        <!--<h1>Product goes here</h1>-->
+        <h1>{{ product }}</h1>
     </div>
 
-    <!-- Import Js -->
+    <!-- Import App -->
     <script src="./main.js"></script>
+    <!-- Mount App -->    
+    <!-- in this block, the app is mounted into the DOM.
+         app is which app whill have the app mounted
+         #app is the "DOM Selector"
+    -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>    
+  
   </body>
 </html>
